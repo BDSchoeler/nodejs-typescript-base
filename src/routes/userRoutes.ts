@@ -1,10 +1,13 @@
 import {Request, Response} from "express";
-export class Routes {
+import {UserController } from "../controllers/userController";
 
+export class Routes {
   public routes(app: any): void {
 
     app.route("/")
     .get((req: Request, res: Response) => {
+        // tslint:disable-next-line:no-console
+        console.log("hi");
         res.status(200).send({
             message: "GET request successfull!"
         });
